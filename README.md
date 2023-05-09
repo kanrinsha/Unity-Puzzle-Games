@@ -11,8 +11,8 @@
 
 Another game called "Shape Puzzle", the player is given a set of random shapes, such as triangles, squares, and rectangles, each with a different size and orientation. The player must then arrange these shapes in a 3x3 grid in such a way that they fit together to form a perfect square.
 
-![image](https://user-images.githubusercontent.com/52096006/237015626-344e74c2-6481-4888-9938-e513374842b4.png)
 ![image](https://user-images.githubusercontent.com/52096006/237015692-882a16e2-0050-4e09-8c1a-f1401b27a9a7.png)
+![image](https://user-images.githubusercontent.com/52096006/237015626-344e74c2-6481-4888-9938-e513374842b4.png)
 
 **The games described in the previous prompts are designed to be created as projects completed in a day. As such, they may not be completely polished or finished.**
 They offer an opportunity to quickly prototype and test ideas, and can serve as a starting point for further development.

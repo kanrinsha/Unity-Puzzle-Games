@@ -1,11 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class SimonSaysGameManager : MonoBehaviour
 {
     public int currentPuzzle = 1;
     public SimonSaysPuzzle[] shapePuzzles = null;
+
+    public Button startPuzzleButton;
 
     private void Start()
     {
@@ -21,6 +26,18 @@ public class SimonSaysGameManager : MonoBehaviour
 
             puzzle.gameObject.SetActive(false);
         }
+
+        startPuzzleButton.onClick.AddListener(ButtonClicked);
+    }
+
+    private void ButtonClicked()
+    {
+        if (currentPuzzle > shapePuzzles.Length)
+            return;
+
+        shapePuzzles[currentPuzzle].StartPuzzle();
+        shapePuzzles[currentPuzzle].completeScreen.SetActive(false);
+        shapePuzzles[currentPuzzle].failedScreen.SetActive(false);
     }
 
     public void PuzzleCompleted()
@@ -31,6 +48,8 @@ public class SimonSaysGameManager : MonoBehaviour
         if (currentPuzzle < shapePuzzles.Length)
         {
             shapePuzzles[currentPuzzle].gameObject.SetActive(true);
+
+            startPuzzleButton.gameObject.SetActive(true);
             print("Puzzle advanced!");
         }
         else

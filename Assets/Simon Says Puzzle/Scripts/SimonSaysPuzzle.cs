@@ -31,6 +31,9 @@ public class SimonSaysPuzzle : MonoBehaviour
 
             var image = button.GetComponent<Image>();
             buttonPairs.Add(button, image);
+
+            image.color = Color.black;
+
             buttonColors.Add(button, new Color(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f),
                 UnityEngine.Random.Range(0f, 1f)));
 
